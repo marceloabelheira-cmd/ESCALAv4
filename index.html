@@ -57,11 +57,28 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--t
   color:rgba(255,255,255,.55);
   margin-top:3px;line-height:1.35;
 }
-.header-right{display:flex;gap:6px;align-items:center;flex-shrink:0}
+.header-right{display:flex;align-items:center;gap:16px;flex-shrink:0}
 .hpill{font-size:10.5px;font-weight:600;padding:4px 11px;border-radius:20px;border:1px solid transparent;white-space:nowrap}
 .hp-o{background:rgba(224,77,11,.22);color:#FDBA74;border-color:rgba(224,77,11,.3)}
 .hp-t{background:rgba(13,140,110,.18);color:#5EEAD4;border-color:rgba(13,140,110,.28)}
 .hp-g{background:rgba(255,255,255,.07);color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.1)}
+/* nav links in header */
+.header-nav{display:flex;flex-direction:column;gap:6px;flex-shrink:0}
+.hnav-link{
+  display:flex;align-items:center;gap:7px;
+  padding:6px 14px;border-radius:8px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.82);
+  font-size:11px;font-weight:600;
+  text-decoration:none;white-space:nowrap;
+  transition:all .18s;letter-spacing:.1px;
+}
+.hnav-link:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);color:#fff}
+.hnav-link .hnav-icon{font-size:12px;flex-shrink:0;opacity:.8}
+/* pills column */
+.header-pills-col{display:flex;flex-direction:column;gap:4px;align-items:flex-end;flex-shrink:0}
+.header-pills-col .hpill{font-size:9.5px;padding:3px 9px}
 .header-note{
   padding:7px 2.5rem;
   background:rgba(0,0,0,.2);
@@ -370,9 +387,19 @@ tbody tr:hover td{background:var(--blue-bg)!important}
       <div class="header-sub">Municípios Impactados segundo metodologia da MATRIZ ICR &nbsp;·&nbsp; novembro de 2025 a abril de 2026</div>
     </div>
     <div class="header-right">
-      <span class="hpill hp-o">Verão 2025/2026</span>
-      <span class="hpill hp-t">157 registros</span>
-      <span class="hpill hp-g">IBGE 2025</span>
+      <div class="header-nav">
+        <a class="hnav-link" href="https://marceloabelheira-cmd.github.io/PORTAL_SIMEO_chuvasRJ/" target="_blank" rel="noopener">
+          <span class="hnav-icon">🔗</span>Plataforma Integrada de Matrizes
+        </a>
+        <a class="hnav-link" href="https://marceloabelheira-cmd.github.io/MATRIZICR_Chuvas_Classificacao/" target="_blank" rel="noopener">
+          <span class="hnav-icon">📝</span>Formulário para Classificação e Registro dos Eventos
+        </a>
+      </div>
+      <div class="header-pills-col">
+        <span class="hpill hp-o">Verão 2025/2026</span>
+        <span class="hpill hp-t">157 registros</span>
+        <span class="hpill hp-g">IBGE 2025</span>
+      </div>
     </div>
   </div>
   <div class="header-note">
